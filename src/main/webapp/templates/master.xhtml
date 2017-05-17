@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+     <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Gerencia e configuração de Mudanças</title>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="false" closable="false" collapsible="true" >
+                    <p:outputLabel value="Gerência e Configuração de Mudanças"/>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="250" header="Menu Principal" style="font-size: 15px;border-style: none" resizable="true" closable="false" collapsible="true">
+                    <p:outputLabel value="Oeste"/>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="east" size="200" style="font-size: 15px" resizable="true" closable="false" collapsible="true">
+                    <p:outputLabel value="Leste"/>
+                </p:layoutUnit>
+
+                <p:layoutUnit style="border-style: none" position="center">
+                    <ui:insert name="conteudo"/>
+                </p:layoutUnit>
+
+            </p:layout>
+
+        </h:body>
+
+    </f:view>
+</html>
