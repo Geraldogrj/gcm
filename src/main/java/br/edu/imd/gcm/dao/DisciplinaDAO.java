@@ -48,6 +48,7 @@ public class DisciplinaDAO {
             userTransaction.commit();
         } catch (Exception e) {
             userTransaction.rollback();
+            e.printStackTrace();
         }
     }
 
