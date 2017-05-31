@@ -9,7 +9,7 @@
     <ui:composition template="/templates/master.xhtml">
         <ui:define name="conteudo">
             <h:form>
-                <p:fieldset legend="Dados do Professor">
+                <p:fieldset legend="Dados do Professor" style="font-size: 11px">
                     <p:panelGrid columns="2">
                         <p:outputLabel value="Nome" for="nome"/>
                         <p:inputText id="nome" value="#{professorBean.professor.nome}"/>
@@ -20,6 +20,11 @@
                         <p:commandButton action="#{professorBean.cadastrar()}" value="Cadastrar"/>
                     </p:panelGrid>
                 </p:fieldset>
+            </h:form>
+            <h:form>
+                <p:dataTable value="Professores Cadastrados" >
+                    
+                </p:dataTable>
             </h:form>
         </ui:define>
     </ui:composition>
