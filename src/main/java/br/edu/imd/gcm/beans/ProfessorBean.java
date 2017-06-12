@@ -1,14 +1,17 @@
 package br.edu.imd.gcm.beans;
 
 import br.edu.imd.gcm.models.Professor;
-import javax.faces.bean.ManagedBean;
+import java.io.Serializable;
+import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
 
 /**
  *
  * @author geral_001
  */
-@ManagedBean
-public class ProfessorBean {
+@SessionScoped
+@Named
+public class ProfessorBean implements Serializable {
     
     private Professor professor = new Professor();
 
@@ -21,8 +24,9 @@ public class ProfessorBean {
     }
     
     
-    public void cadastrar(){
+    public String cadastrar(){
         System.out.println("Professor " + this.professor.getNome() + " cadastrado com sucesso");
+        return "/pages/erro404.xhtml?faces-redirect=true";
         
     }
     
